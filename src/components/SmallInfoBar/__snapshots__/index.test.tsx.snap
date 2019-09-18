@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SmallInfoBar component renders the expected snapshot 1`] = `
+<div
+  className="flex justify-between fw2"
+>
+  <div
+    className="pb2 f7 pt2 __t"
+    style={
+      Object {
+        "marginLeft": -16,
+      }
+    }
+  >
+    Found: 5
+  </div>
+  <a
+    className="db pv2 pointer fw5"
+    onClick={[MockFunction]}
+    style={
+      Object {
+        "color": "#373232",
+        "marginRight": -16,
+        "textDecoration": "underline",
+        "textIndent": 6,
+      }
+    }
+  >
+    Manage records
+  </a>
+</div>
+`;

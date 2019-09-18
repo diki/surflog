@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dropdown component renders the expected snapshot 1`] = `
+<Dropdown
+  arrowClassName="source-dropdown-arrow"
+  baseClassName="Dropdown"
+  className="source-dropdown"
+  controlClassName="source-dropdown-control"
+  menuClassName="source-dropdown-menu"
+  onChange={[MockFunction]}
+  options={
+    Array [
+      "1",
+      "2",
+      "3",
+    ]
+  }
+  value="3"
+/>
+`;

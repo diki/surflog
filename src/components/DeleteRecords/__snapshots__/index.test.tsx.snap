@@ -1,0 +1,142 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DeleteRecords component renders the expected snapshot 1`] = `
+<div
+  className="shadow-1 white"
+  style={
+    Object {
+      "background": "#000000b0",
+      "width": "100%",
+    }
+  }
+>
+  <div
+    className="w-100 flex flex-column f5 pv3 pl3 pr0"
+  >
+    <div
+      className="form-line"
+    >
+      <div
+        className="mr3 fw3 f5"
+        style={
+          Object {
+            "color": "#edf6fff2",
+            "flex": 2,
+          }
+        }
+      >
+        Source
+      </div>
+      <div
+        style={
+          Object {
+            "flex": 4,
+          }
+        }
+      >
+        <Dropdown
+          onChange={[Function]}
+          options={
+            Array [
+              "all",
+              "hackernews",
+              "twitter",
+              "stackoverflow",
+              "reddit",
+              "github",
+              "youtube",
+            ]
+          }
+          small={true}
+          value="all"
+        />
+      </div>
+    </div>
+    <div
+      className="form-line"
+      style={
+        Object {
+          "marginTop": 16,
+          "minWidth": 240,
+        }
+      }
+    >
+      <div
+        className="mr3 fw3 f5"
+        style={
+          Object {
+            "color": "#edf6fff2",
+            "flex": 2,
+          }
+        }
+      >
+        Time range
+      </div>
+      <div
+        style={
+          Object {
+            "flex": 4,
+          }
+        }
+      >
+        <Dropdown
+          onChange={[Function]}
+          options={
+            Array [
+              Object {
+                "label": "Last hour",
+                "value": "lastHour",
+              },
+              Object {
+                "label": "Last 24 hours",
+                "value": "last24Hours",
+              },
+              Object {
+                "label": "Last 7 days",
+                "value": "last7Days",
+              },
+              Object {
+                "label": "Last 4 weeks",
+                "value": "last4weeks",
+              },
+              Object {
+                "label": "All time",
+                "value": "all",
+              },
+            ]
+          }
+          small={true}
+          value="lastHour"
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    className="form-buttons"
+  >
+    <button
+      className="sl--button __t1"
+      onClick={[MockFunction]}
+      style={
+        Object {
+          "background": "#4d5052ed",
+          "marginRight": 16,
+        }
+      }
+    >
+      Cancel
+    </button>
+    <button
+      className="sl--button mr3 __t2"
+      onClick={[Function]}
+      style={
+        Object {
+          "background": "#737475e6",
+        }
+      }
+    >
+      Clear data
+    </button>
+  </div>
+</div>
+`;

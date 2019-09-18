@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Title component renders the expected snapshot 1`] = `
+<div
+  className="pl2 fw4"
+  key="match_title"
+  style={
+    Object {
+      "fontSize": "15px",
+    }
+  }
+>
+  <span
+    style={
+      Object {
+        "background": "yellow",
+      }
+    }
+  >
+    Recor
+  </span>
+  d title
+</div>
+`;

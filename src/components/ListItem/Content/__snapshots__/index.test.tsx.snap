@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Content component renders the expected snapshot 1`] = `
+<div
+  key="match_undefined"
+>
+  <span
+    style={
+      Object {
+        "background": "yellow",
+      }
+    }
+  >
+    Recor
+  </span>
+  d content
+  ...
+</div>
+`;

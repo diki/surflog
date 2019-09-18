@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Statistics component renders the expected snapshot 1`] = `
+<div
+  className="tc f4 fw3 ph3 flex pv3 justify-center"
+>
+  <div
+    className="total"
+  >
+    10 records in total
+  </div>
+  ,   
+  <a
+    className="fw2 bg-animate black bb"
+    onClick={[MockFunction]}
+    style={
+      Object {
+        "cursor": "pointer",
+        "padding": "0 4px",
+      }
+    }
+  >
+      
+    manage records
+  </a>
+</div>
+`;

@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "outDir": "build",
+    "target": "esnext",
+    "moduleResolution": "node",
+    "module": "commonjs",
+    "allowJs": true,
+    "lib": ["dom", "es2017", "dom.iterable"],
+    "jsx": "react",
+    "noEmit": false,
+    "strict": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "esModuleInterop": true,
+    "noUnusedParameters": true,
+    "baseUrl": "src",
+    "types": ["chrome", "jest"]
+  },
+  "include": ["src/**/*"]
+}

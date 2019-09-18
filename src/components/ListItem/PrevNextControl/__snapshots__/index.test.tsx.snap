@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PrevNextControl component renders the expected snapshot 1`] = `
+<div
+  className="control bottom-0 right-0 flex absolute h1 f7 justify-center"
+  style={
+    Object {
+      "background": "#01032480",
+      "minWidth": 136,
+    }
+  }
+>
+  <div>
+    (3 of 6)
+     |
+     
+    <a
+      onClick={[MockFunction]}
+    >
+       &lt;
+       Prev 
+      <span>
+        | 
+      </span>
+    </a>
+    <a
+      onClick={[MockFunction]}
+    >
+      Next &gt; 
+    </a>
+  </div>
+</div>
+`;

@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ResultsList component renders the expected snapshot 1`] = `
+<div
+  style={
+    Object {
+      "fontSize": 14,
+      "margin": "0 -16px",
+      "overflowWrap": "break-word",
+    }
+  }
+>
+  <ListItem
+    key="0_item"
+    occurences={
+      Array [
+        Object {
+          "key": "content",
+          "position": Array [
+            61,
+            5,
+          ],
+        },
+      ]
+    }
+    onClick={[Function]}
+    record={
+      Object {
+        "content": "·8mReplying to @BenLeshI'm mildly surprised I haven't had to build @ladyleet a fort yet. 1",
+        "id": "/BenLesh/status/1160394371784744962",
+        "lastVisitedTime": 1565495077688,
+        "link": "https://twitter.com//BenLesh/status/1160394371784744962",
+        "page": "twitter",
+        "title": "Ben Lesh@BenLesh",
+      }
+    }
+  />
+  <ListItem
+    key="1_item"
+    occurences={
+      Array [
+        Object {
+          "key": "content",
+          "position": Array [
+            17,
+            5,
+          ],
+        },
+      ]
+    }
+    onClick={[Function]}
+    record={
+      Object {
+        "content": "·16mI decided to build a box fort for my 4 yr old out of some of our moving boxes... And maybe it got out of hand. 623",
+        "id": "/BenLesh/status/1160392474503897091",
+        "lastVisitedTime": 1565495072153,
+        "link": "https://twitter.com//BenLesh/status/1160392474503897091",
+        "page": "twitter",
+        "title": "Ben Lesh@BenLesh",
+      }
+    }
+  />
+</div>
+`;

@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppHeader component renders the expected snapshot 1`] = `
+<div>
+  <div
+    className="header flex top-0 left-0 white w-100 fixed f3"
+  >
+    <div
+      className="bg-white w2 h2 br-100"
+    >
+      <SvgComponent
+        fill="rgb(42, 186, 83)"
+        height={32}
+        style={
+          Object {
+            "marginTop": 3,
+          }
+        }
+        width={32}
+      />
+    </div>
+    <div
+      className="fw9 pl3 lh-title"
+    >
+      SURFLOG
+    </div>
+    <div
+      className="__t"
+      data-for="tooltip"
+      data-tip={true}
+      style={
+        Object {
+          "cursor": "pointer",
+          "height": 20,
+          "marginLeft": "auto",
+          "marginRight": 8,
+          "marginTop": 3,
+        }
+      }
+    >
+      <SvgComponent
+        fill="white"
+        height={24}
+        style={
+          Object {
+            "marginTop": 3,
+          }
+        }
+        width={24}
+      />
+    </div>
+    <ReactTooltip
+      clickable={false}
+      effect="solid"
+      id="tooltip"
+      insecure={true}
+      place="bottom"
+      resizeHide={true}
+      role="example"
+      wrapper="div"
+    >
+      <div
+        className="f7"
+      >
+        About
+      </div>
+    </ReactTooltip>
+  </div>
+</div>
+`;

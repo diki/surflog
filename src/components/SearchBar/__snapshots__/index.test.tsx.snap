@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchBar component renders the expected snapshot 1`] = `
+<div
+  style={
+    Object {
+      "margin": "0 -16px",
+    }
+  }
+>
+  <div
+    className="f4 pb3 black-70"
+  >
+    Search
+     
+    <Dropdown
+      arrowClassName="source-dropdown-arrow"
+      baseClassName="Dropdown"
+      className="f4 dib v-btm bb b--gray fw3 black-50"
+      controlClassName="none bn-ns pb0 fw4 mr2"
+      menuClassName="source-dropdown-menu"
+      onChange={[Function]}
+      options={
+        Array [
+          Object {
+            "label": "all websites",
+            "value": "all",
+          },
+          Object {
+            "label": "Hackernews",
+            "value": "hackernews",
+          },
+          Object {
+            "label": "Twitter",
+            "value": "twitter",
+          },
+          Object {
+            "label": "Stackoverflow",
+            "value": "stackoverflow",
+          },
+          Object {
+            "label": "Reddit",
+            "value": "reddit",
+          },
+          Object {
+            "label": "Github",
+            "value": "github",
+          },
+          Object {
+            "label": "Youtube",
+            "value": "youtube",
+          },
+        ]
+      }
+      placeholder="Select an option"
+      value="all"
+    />
+     
+  </div>
+  <div>
+    <input
+      className="pa2 w-100 f5 fw3"
+      onChange={[Function]}
+      placeholder="enter keyword"
+      style={
+        Object {
+          "outline": "none",
+        }
+      }
+      type="text"
+    />
+  </div>
+</div>
+`;
