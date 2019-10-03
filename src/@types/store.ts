@@ -1,5 +1,5 @@
 import * as actions from 'store/actions';
-import { IMatch, IStatistics } from './index';
+import { IMatch, IStatistics, IRecord } from './index';
 
 export interface IAction {
   type: string;
@@ -12,12 +12,14 @@ export interface IUIState {
   mode: string;
   query: string;
   resultsArrived: boolean;
+  latestSource: string;
 }
 
 export interface IStore {
   matches: IMatch[];
   statistics: IStatistics;
   ui: IUIState;
+  latest: IRecord[];
 }
 
 export type Actions = {

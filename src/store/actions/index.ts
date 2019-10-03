@@ -3,6 +3,7 @@ import {
   STATISTICS_GET_STORAGE,
   MATCHES_GET,
   RECORDS_DOWNLOAD,
+  MATCHES_GET_LATEST,
 } from 'store/contants';
 import { ActionCreator } from 'redux';
 import { IAction } from '@types';
@@ -42,3 +43,8 @@ export const setUI: ActionCreator<IAction> = payload => ({
   type: '@ui/set',
   payload,
 });
+
+export const getLatest: ActionCreator<IAction> = payload => ({
+  type: MATCHES_GET_LATEST,
+  payload
+})

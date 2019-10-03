@@ -1,6 +1,6 @@
 import { Reducer } from 'redux';
 import { IUIState, IAction } from '@types';
-import { MATCHES_GET, MATCHES_SET } from 'store/contants';
+import { MATCHES_GET, MATCHES_SET, MATCHES_GET_LATEST } from 'store/contants';
 
 const uiReducer: Reducer<IUIState, IAction> = (
   state = {
@@ -9,6 +9,7 @@ const uiReducer: Reducer<IUIState, IAction> = (
     mode: 'search',
     query: '',
     resultsArrived: false,
+    latestSource: 'all',
   },
   action,
 ) => {
@@ -28,6 +29,11 @@ const uiReducer: Reducer<IUIState, IAction> = (
       return {
         ...state,
         resultsArrived: true,
+      };
+    case MATCHES_GET_LATEST:
+      return {
+        ...state,
+        latestSource: action.payload.source,
       };
     default:
       return state;

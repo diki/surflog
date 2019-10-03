@@ -4,6 +4,7 @@ import SearchBar from 'components/SearchBar';
 import ResultsList from 'components/ResultsList';
 import Statistics from 'components/Statistics';
 import SmallInfoBar from 'components/SmallInfoBar';
+import Latest from 'components/LatestVisits';
 
 import { Actions, IStore } from '@types';
 
@@ -18,6 +19,20 @@ class SearchScreen extends React.Component<PropsType> {
     return (
       <div>
         <SearchBar actions={actions} query={ui.query} />
+        <div className="flex justify-end fw2">
+          <a
+            className="db pv2 pointer fw5"
+            style={{
+              textIndent: 6,
+              marginRight: -16,
+              color: '#373232',
+              textDecoration: 'underline',
+            }}
+            onClick={() => actions.setUI({ key: 'mode', value: 'manage' })}
+          >
+            Manage records
+          </a>
+        </div>
         {ui.resultsArrived && (
           <SmallInfoBar
             totalResultsFound={matches.length}
@@ -27,12 +42,15 @@ class SearchScreen extends React.Component<PropsType> {
           />
         )}
         {ui.query.length === 0 && (
-          <Statistics
-            storage={statistics.storage}
-            onClickManage={() =>
-              actions.setUI({ key: 'mode', value: 'manage' })
-            }
-          />
+          <div>
+            {/* <Statistics
+              storage={statistics.storage}
+              onClickManage={() =>
+                actions.setUI({ key: 'mode', value: 'manage' })
+              }
+            /> */}
+            <Latest records={this.props.latest} ui={this.props.ui} />
+          </div>
         )}
         {ui.resultsArrived && (
           <ResultsList

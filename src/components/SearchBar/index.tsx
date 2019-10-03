@@ -13,6 +13,7 @@ const options = [
 interface PropsType {
   actions: {
     search: ({ query, source }: { query: string; source: string }) => void;
+    getLatest: Function;
   };
   query: string;
 }
@@ -56,6 +57,7 @@ class SearchBar extends React.Component<PropsType, StateType> {
             placeholder="enter keyword"
             style={{ outline: 'none' }}
             defaultValue={this.props.query}
+            autoFocus
           />
         </div>
       </div>
@@ -74,13 +76,18 @@ class SearchBar extends React.Component<PropsType, StateType> {
   };
 
   handleSourceChange = (event: any) => {
+    const query = this.state.inputValue;
+    if (query.length === 0) {
+      // if no query get latest 20 records
+      this.props.actions.getLatest({ source: event.value });
+    }
     this.setState(
       {
         searchOn: event.value,
       },
       () =>
         this.props.actions.search({
-          query: this.state.inputValue,
+          query,
           source: this.state.searchOn,
         }),
     );

@@ -65,6 +65,7 @@ function mapStateToProps(state: IStore): IStore {
     matches: state.matches,
     statistics: state.statistics,
     ui: state.ui,
+    latest: state.latest,
   };
 }
 

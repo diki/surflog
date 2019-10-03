@@ -24,6 +24,8 @@ import {
   RECORDS_UPLOAD_ERROR,
   RECORDS_DELETE,
   RECORDS_DELETE_ERROR,
+  MATCHES_GET_LATEST,
+  MATCHES_SET_LATEST,
 } from 'store/contants';
 import { IRecord, IMatch } from '@types';
 
@@ -210,6 +212,25 @@ chrome.runtime.onConnect.addListener(async port => {
           type: RECORDS_DELETE_ERROR,
         });
       }
+    }
+
+    if (type === MATCHES_GET_LATEST) {
+      const { source, range } = msg.payload;
+      let latest: IRecord[] = [];
+      if (source === 'all') {
+        latest = await db.records.limit(20).toArray();
+      } else {
+        latest = await db.records
+          .where('page')
+          .equals(source)
+          .limit(20)
+          .toArray();
+      }
+
+      chrome.runtime.sendMessage({
+        type: MATCHES_SET_LATEST,
+        payload: latest.sort((a, b) => b.lastVisitedTime - a.lastVisitedTime),
+      });
     }
   });
 });

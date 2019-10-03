@@ -6,13 +6,13 @@ interface PropTypes {
   onClickManage: () => void;
 }
 
-const SmallInfoBar = ({ totalResultsFound, onClickManage }: PropTypes) => {
+const SmallInfoBar = ({ totalResultsFound }: PropTypes) => {
   return (
     <div className="flex justify-between fw2">
-      <div className="pb2 f7 pt2 __t" style={{ marginLeft: -16 }}>
+      <div className="pb2 f6 pt2 __t" style={{ marginLeft: -16 }}>
         {totalResultsFound > 0 && `Found: ${totalResultsFound}`}
       </div>
-      <a
+      {/* <a
         className="db pv2 pointer fw5"
         style={{
           textIndent: 6,
@@ -23,7 +23,7 @@ const SmallInfoBar = ({ totalResultsFound, onClickManage }: PropTypes) => {
         onClick={onClickManage}
       >
         Manage records
-      </a>
+      </a> */}
     </div>
   );
 };

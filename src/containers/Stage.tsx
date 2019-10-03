@@ -13,6 +13,7 @@ type PropsType = IStore & IDispatchProps;
 class Stage extends React.Component<PropsType> {
   componentDidMount() {
     this.props.actions.getStatistics();
+    this.props.actions.getLatest({ source: 'all' });
   }
 
   render(): JSX.Element {

@@ -24,6 +24,8 @@ import {
   RECORDS_DOWNLOAD,
   RECORDS_UPLOAD,
   RECORDS_DELETE,
+  MATCHES_GET_LATEST,
+  MATCHES_SET_LATEST,
 } from 'store/contants';
 import { IAction, IRecord, IStore } from '@types';
 
@@ -186,6 +188,30 @@ const deleteRecordsEpic: Epic<IAction, IAction> = action$ =>
     ignoreElements(),
   );
 
+const getLatestEpic: Epic<IAction, IAction> = action$ =>
+  action$.pipe(
+    ofType(MATCHES_GET_LATEST),
+    tap(({ type, payload }) => {
+      port.postMessage({
+        type,
+        payload,
+      });
+    }),
+    switchMap(() =>
+      messages.pipe(
+        mergeMap(({ request }) => {
+          return iif<IAction, IAction>(
+            () => request.type === MATCHES_SET_LATEST,
+            of({
+              type: MATCHES_SET_LATEST,
+              payload: request.payload,
+            }),
+          );
+        }),
+      ),
+    ),
+  );
+
 export default combineEpics(
   searchEpic,
   statisticsEpic,
@@ -193,4 +219,5 @@ export default combineEpics(
   uploadEpic,
   getSummaryEpic,
   deleteRecordsEpic,
+  getLatestEpic,
 );

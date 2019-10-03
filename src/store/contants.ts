@@ -15,3 +15,5 @@ export const RECORDS_UPLOAD_SUCCESS = '@records/upload_success';
 export const RECORDS_UPLOAD_ERROR = '@records/upload_error';
 export const RECORDS_DELETE = '@records/delete';
 export const RECORDS_DELETE_ERROR = '@records/delete_error';
+export const MATCHES_GET_LATEST = '@matches/get_latest';
+export const MATCHES_SET_LATEST = '@matches/set_latest';
