@@ -11,7 +11,7 @@
   "background": {
     "scripts": ["js/bg.entry.js"]
   },
-  "permissions": ["activeTab", "storage", "unlimitedStorage"],
+  "permissions": ["activeTab", "storage", "unlimitedStorage", "downloads"],
   "content_scripts": [
     {
       "matches": [
